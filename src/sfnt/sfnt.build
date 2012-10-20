@@ -1,0 +1,12 @@
+sfdriver.c
+sfnt.c
+sfntpic.c
+sfobjs.c
+ttbdf.c
+ttcmap.c
+ttkern.c
+ttload.c
+ttmtx.c
+ttpost.c
+ttsbit.c
+ttsbit0.c

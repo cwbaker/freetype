@@ -1,0 +1,9 @@
+ftcache.c
+ftcbasic.c
+ftccache.c
+ftccmap.c
+ftcglyph.c
+ftcimage.c
+ftcmanag.c
+ftcmru.c
+ftcsbits.c
