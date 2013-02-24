@@ -1,7 +1,5 @@
 
-Library {
-    id = "freetype";
-
+Library "freetype" {
     settings = {
         run_time_checks = false;
         include_directories = {
@@ -9,7 +7,7 @@ Library {
         };
     };
 
-    Source {
+    Cxx {
         defines = {
             "FT2_BUILD_LIBRARY"
         };
@@ -26,7 +24,7 @@ Library {
         "src/autofit/afwarp.c",
     };
 
-    Source {
+    Cxx {
         defines = {
             "FT2_BUILD_LIBRARY"
         };
@@ -67,7 +65,7 @@ Library {
         "src/base/ftxf86.c"
     };
 
-    Source {
+    Cxx {
         defines = {
             "FT2_BUILD_LIBRARY"
         };
@@ -75,7 +73,7 @@ Library {
         "src/bdf/bdflib.c"
     };
 
-    Source {
+    Cxx {
         defines = {
             "FT2_BUILD_LIBRARY"
         };
@@ -89,7 +87,7 @@ Library {
         "src/cache/ftcsbits.c"
     };
 
-    Source {
+    Cxx {
         defines = {
             "FT2_BUILD_LIBRARY"
         };
@@ -102,7 +100,7 @@ Library {
         "src/cff/cffpic.c"
     };
 
-    Source {
+    Cxx {
         defines = {
             "FT2_BUILD_LIBRARY"
         };
@@ -113,7 +111,7 @@ Library {
         "src/cid/cidriver.c",
     };
 
-    Source {
+    Cxx {
         defines = {
             "FT2_BUILD_LIBRARY"
         };
@@ -122,28 +120,28 @@ Library {
         "src/pcf/pcfutil.c"
     };
 
-    Source {
+    Cxx {
         defines = {
             "FT2_BUILD_LIBRARY"
         };
         "src/bzip2/ftbzip2.c"
     };
 
-    Source {
+    Cxx {
         defines = {
             "FT2_BUILD_LIBRARY"
         };
         "src/gzip/ftgzip.c",
     };
 
-    Source {
+    Cxx {
         defines = {
             "FT2_BUILD_LIBRARY"
         };
         "src/lzw/ftlzw.c",
     };
 
-    Source {
+    Cxx {
         defines = {
             "FT2_BUILD_LIBRARY"
         };
@@ -155,7 +153,7 @@ Library {
         "src/pfr/pfrsbit.c"
     };
 
-    Source {
+    Cxx {
         defines = {
             "FT2_BUILD_LIBRARY"
         };
@@ -167,7 +165,7 @@ Library {
         "src/psaux/t1decode.c"
     };
 
-    Source {
+    Cxx {
         defines = {
             "FT2_BUILD_LIBRARY"
         };
@@ -178,7 +176,7 @@ Library {
         "src/pshinter/pshrec.c"
     };
 
-    Source {
+    Cxx {
         defines = {
             "FT2_BUILD_LIBRARY"
         };
@@ -186,7 +184,7 @@ Library {
         "src/psnames/pspic.c"
     };
 
-    Source {
+    Cxx {
         defines = {
             "FT2_BUILD_LIBRARY"
         };
@@ -195,7 +193,7 @@ Library {
         "src/raster/rastpic.c"
     };
 
-    Source {
+    Cxx {
         defines = {
             "FT2_BUILD_LIBRARY"
         };
@@ -204,7 +202,7 @@ Library {
         "src/smooth/ftspic.c",
     };
 
-    Source {
+    Cxx {
         defines = {
             "FT2_BUILD_LIBRARY"
         };
@@ -220,7 +218,7 @@ Library {
         "src/sfnt/ttsbit.c",
     };
 
-    Source {
+    Cxx {
         defines = {
             "FT2_BUILD_LIBRARY"
         };
@@ -233,7 +231,7 @@ Library {
         "src/truetype/ttpload.c"
     };
 
-    Source {
+    Cxx {
         defines = {
             "FT2_BUILD_LIBRARY"
         };
@@ -245,7 +243,7 @@ Library {
         "src/type1/t1parse.c"
     };
 
-    Source {
+    Cxx {
         defines = {
             "FT2_BUILD_LIBRARY"
         };
@@ -254,7 +252,7 @@ Library {
         "src/type42/t42parse.c",
     };
 
-    Source {
+    Cxx {
         settings = {
             platforms = { "msvc", "mingw" };
         };
