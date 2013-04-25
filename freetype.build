@@ -126,10 +126,11 @@ Library "freetype" {
         };
         "src/bzip2/ftbzip2.c"
     };
-
+    
     Cxx {
         defines = {
-            "FT2_BUILD_LIBRARY"
+            "FT2_BUILD_LIBRARY",
+            "FT_CONFIG_OPTION_SYSTEM_ZLIB"
         };
         "src/gzip/ftgzip.c",
     };
