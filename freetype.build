@@ -2,9 +2,6 @@
 Library "freetype" {
     settings = {
         run_time_checks = false;
-        include_directories = {
-            absolute( "include" );
-        };
     };
 
     Cxx {
