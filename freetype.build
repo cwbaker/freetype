@@ -1,5 +1,6 @@
 
 local settings = build.push_settings {
+    warning_level = 0;
     run_time_checks = false;
 };
 
