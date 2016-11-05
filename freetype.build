@@ -1,12 +1,12 @@
 
-local settings = build:push_settings {
-    warning_level = 0;
-    run_time_checks = false;
-};
+for _, build in build:default_builds() do 
+    local build = build:configure {
+        warning_level = 0;
+        run_time_checks = false;
+    };
 
-for _, architecture in ipairs(settings.architectures) do 
-    local freetype = build:Library ("freetype", architecture) {
-        build:Cc (architecture) {
+    local freetype = build:Library "freetype" {
+        build:Cc () {
             defines = {
                 "FT2_BUILD_LIBRARY"
             };
@@ -23,7 +23,7 @@ for _, architecture in ipairs(settings.architectures) do
             "src/autofit/afwarp.c",
         };
 
-        build:Cc (architecture) {
+        build:Cc () {
             defines = {
                 "FT2_BUILD_LIBRARY"
             };
@@ -64,7 +64,7 @@ for _, architecture in ipairs(settings.architectures) do
             "src/base/ftxf86.c"
         };
 
-        build:Cc (architecture) {
+        build:Cc () {
             defines = {
                 "FT2_BUILD_LIBRARY"
             };
@@ -72,7 +72,7 @@ for _, architecture in ipairs(settings.architectures) do
             "src/bdf/bdflib.c"
         };
 
-        build:Cc (architecture) {
+        build:Cc () {
             defines = {
                 "FT2_BUILD_LIBRARY"
             };
@@ -86,7 +86,7 @@ for _, architecture in ipairs(settings.architectures) do
             "src/cache/ftcsbits.c"
         };
 
-        build:Cc (architecture) {
+        build:Cc () {
             defines = {
                 "FT2_BUILD_LIBRARY"
             };
@@ -99,7 +99,7 @@ for _, architecture in ipairs(settings.architectures) do
             "src/cff/cffpic.c"
         };
 
-        build:Cc (architecture) {
+        build:Cc () {
             defines = {
                 "FT2_BUILD_LIBRARY"
             };
@@ -110,7 +110,7 @@ for _, architecture in ipairs(settings.architectures) do
             "src/cid/cidriver.c",
         };
 
-        build:Cc (architecture) {
+        build:Cc () {
             defines = {
                 "FT2_BUILD_LIBRARY"
             };
@@ -119,14 +119,14 @@ for _, architecture in ipairs(settings.architectures) do
             "src/pcf/pcfutil.c"
         };
 
-        build:Cc (architecture) {
+        build:Cc () {
             defines = {
                 "FT2_BUILD_LIBRARY"
             };
             "src/bzip2/ftbzip2.c"
         };
 
-        build:Cc (architecture) {
+        build:Cc () {
             defines = {
                 "FT2_BUILD_LIBRARY",
                 "FT_CONFIG_OPTION_SYSTEM_ZLIB"
@@ -134,14 +134,14 @@ for _, architecture in ipairs(settings.architectures) do
             "src/gzip/ftgzip.c",
         };
 
-        build:Cc (architecture) {
+        build:Cc () {
             defines = {
                 "FT2_BUILD_LIBRARY"
             };
             "src/lzw/ftlzw.c",
         };
 
-        build:Cc (architecture) {
+        build:Cc () {
             defines = {
                 "FT2_BUILD_LIBRARY"
             };
@@ -153,7 +153,7 @@ for _, architecture in ipairs(settings.architectures) do
             "src/pfr/pfrsbit.c"
         };
 
-        build:Cc (architecture) {
+        build:Cc () {
             defines = {
                 "FT2_BUILD_LIBRARY"
             };
@@ -165,7 +165,7 @@ for _, architecture in ipairs(settings.architectures) do
             "src/psaux/t1decode.c"
         };
 
-        build:Cc (architecture) {
+        build:Cc () {
             defines = {
                 "FT2_BUILD_LIBRARY"
             };
@@ -176,7 +176,7 @@ for _, architecture in ipairs(settings.architectures) do
             "src/pshinter/pshrec.c"
         };
 
-        build:Cc (architecture) {
+        build:Cc () {
             defines = {
                 "FT2_BUILD_LIBRARY"
             };
@@ -184,7 +184,7 @@ for _, architecture in ipairs(settings.architectures) do
             "src/psnames/pspic.c"
         };
 
-        build:Cc (architecture) {
+        build:Cc () {
             defines = {
                 "FT2_BUILD_LIBRARY"
             };
@@ -193,7 +193,7 @@ for _, architecture in ipairs(settings.architectures) do
             "src/raster/rastpic.c"
         };
 
-        build:Cc (architecture) {
+        build:Cc () {
             defines = {
                 "FT2_BUILD_LIBRARY"
             };
@@ -202,7 +202,7 @@ for _, architecture in ipairs(settings.architectures) do
             "src/smooth/ftspic.c",
         };
 
-        build:Cc (architecture) {
+        build:Cc () {
             defines = {
                 "FT2_BUILD_LIBRARY"
             };
@@ -218,7 +218,7 @@ for _, architecture in ipairs(settings.architectures) do
             "src/sfnt/ttsbit.c",
         };
 
-        build:Cc (architecture) {
+        build:Cc () {
             defines = {
                 "FT2_BUILD_LIBRARY"
             };
@@ -231,7 +231,7 @@ for _, architecture in ipairs(settings.architectures) do
             "src/truetype/ttpload.c"
         };
 
-        build:Cc (architecture) {
+        build:Cc () {
             defines = {
                 "FT2_BUILD_LIBRARY"
             };
@@ -243,7 +243,7 @@ for _, architecture in ipairs(settings.architectures) do
             "src/type1/t1parse.c"
         };
 
-        build:Cc (architecture) {
+        build:Cc () {
             defines = {
                 "FT2_BUILD_LIBRARY"
             };
@@ -255,7 +255,7 @@ for _, architecture in ipairs(settings.architectures) do
 
     if platform == "windows" then
         freetype {
-            build:Cc (architecture) {
+            build:Cc () {
                 defines = {
                     "FT2_BUILD_LIBRARY"
                 };
@@ -264,5 +264,3 @@ for _, architecture in ipairs(settings.architectures) do
         };
     end
 end
-
-build:pop_settings();
