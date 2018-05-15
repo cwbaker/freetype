@@ -5,7 +5,7 @@ for _, build in build:default_builds("cc_.*") do
         run_time_checks = false;
     };
 
-    local freetype = build:Library "freetype" {
+    local freetype = build:Library '${lib}/freetype_${platform}_${architecture}' {
         build:Cc () {
             defines = {
                 "FT2_BUILD_LIBRARY"
