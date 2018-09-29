@@ -6,7 +6,7 @@ for _, build in build:default_builds("cc_.*") do
     };
 
     local freetype = build:Library '${lib}/freetype_${platform}_${architecture}' {
-        build:Cc () {
+        build:Cc '${obj}/%1' {
             defines = {
                 "FT2_BUILD_LIBRARY"
             };
@@ -23,7 +23,7 @@ for _, build in build:default_builds("cc_.*") do
             "src/autofit/afwarp.c",
         };
 
-        build:Cc () {
+        build:Cc '${obj}/%1' {
             defines = {
                 "FT2_BUILD_LIBRARY"
             };
@@ -64,7 +64,7 @@ for _, build in build:default_builds("cc_.*") do
             "src/base/ftxf86.c"
         };
 
-        build:Cc () {
+        build:Cc '${obj}/%1' {
             defines = {
                 "FT2_BUILD_LIBRARY"
             };
@@ -72,7 +72,7 @@ for _, build in build:default_builds("cc_.*") do
             "src/bdf/bdflib.c"
         };
 
-        build:Cc () {
+        build:Cc '${obj}/%1' {
             defines = {
                 "FT2_BUILD_LIBRARY"
             };
@@ -86,7 +86,7 @@ for _, build in build:default_builds("cc_.*") do
             "src/cache/ftcsbits.c"
         };
 
-        build:Cc () {
+        build:Cc '${obj}/%1' {
             defines = {
                 "FT2_BUILD_LIBRARY"
             };
@@ -99,7 +99,7 @@ for _, build in build:default_builds("cc_.*") do
             "src/cff/cffpic.c"
         };
 
-        build:Cc () {
+        build:Cc '${obj}/%1' {
             defines = {
                 "FT2_BUILD_LIBRARY"
             };
@@ -110,7 +110,7 @@ for _, build in build:default_builds("cc_.*") do
             "src/cid/cidriver.c",
         };
 
-        build:Cc () {
+        build:Cc '${obj}/%1' {
             defines = {
                 "FT2_BUILD_LIBRARY"
             };
@@ -119,14 +119,14 @@ for _, build in build:default_builds("cc_.*") do
             "src/pcf/pcfutil.c"
         };
 
-        build:Cc () {
+        build:Cc '${obj}/%1' {
             defines = {
                 "FT2_BUILD_LIBRARY"
             };
             "src/bzip2/ftbzip2.c"
         };
 
-        build:Cc () {
+        build:Cc '${obj}/%1' {
             defines = {
                 "FT2_BUILD_LIBRARY",
                 "FT_CONFIG_OPTION_SYSTEM_ZLIB"
@@ -134,14 +134,14 @@ for _, build in build:default_builds("cc_.*") do
             "src/gzip/ftgzip.c",
         };
 
-        build:Cc () {
+        build:Cc '${obj}/%1' {
             defines = {
                 "FT2_BUILD_LIBRARY"
             };
             "src/lzw/ftlzw.c",
         };
 
-        build:Cc () {
+        build:Cc '${obj}/%1' {
             defines = {
                 "FT2_BUILD_LIBRARY"
             };
@@ -153,7 +153,7 @@ for _, build in build:default_builds("cc_.*") do
             "src/pfr/pfrsbit.c"
         };
 
-        build:Cc () {
+        build:Cc '${obj}/%1' {
             defines = {
                 "FT2_BUILD_LIBRARY"
             };
@@ -165,7 +165,7 @@ for _, build in build:default_builds("cc_.*") do
             "src/psaux/t1decode.c"
         };
 
-        build:Cc () {
+        build:Cc '${obj}/%1' {
             defines = {
                 "FT2_BUILD_LIBRARY"
             };
@@ -176,7 +176,7 @@ for _, build in build:default_builds("cc_.*") do
             "src/pshinter/pshrec.c"
         };
 
-        build:Cc () {
+        build:Cc '${obj}/%1' {
             defines = {
                 "FT2_BUILD_LIBRARY"
             };
@@ -184,7 +184,7 @@ for _, build in build:default_builds("cc_.*") do
             "src/psnames/pspic.c"
         };
 
-        build:Cc () {
+        build:Cc '${obj}/%1' {
             defines = {
                 "FT2_BUILD_LIBRARY"
             };
@@ -193,7 +193,7 @@ for _, build in build:default_builds("cc_.*") do
             "src/raster/rastpic.c"
         };
 
-        build:Cc () {
+        build:Cc '${obj}/%1' {
             defines = {
                 "FT2_BUILD_LIBRARY"
             };
@@ -202,7 +202,7 @@ for _, build in build:default_builds("cc_.*") do
             "src/smooth/ftspic.c",
         };
 
-        build:Cc () {
+        build:Cc '${obj}/%1' {
             defines = {
                 "FT2_BUILD_LIBRARY"
             };
@@ -218,7 +218,7 @@ for _, build in build:default_builds("cc_.*") do
             "src/sfnt/ttsbit.c",
         };
 
-        build:Cc () {
+        build:Cc '${obj}/%1' {
             defines = {
                 "FT2_BUILD_LIBRARY"
             };
@@ -231,7 +231,7 @@ for _, build in build:default_builds("cc_.*") do
             "src/truetype/ttpload.c"
         };
 
-        build:Cc () {
+        build:Cc '${obj}/%1' {
             defines = {
                 "FT2_BUILD_LIBRARY"
             };
@@ -243,7 +243,7 @@ for _, build in build:default_builds("cc_.*") do
             "src/type1/t1parse.c"
         };
 
-        build:Cc () {
+        build:Cc '${obj}/%1' {
             defines = {
                 "FT2_BUILD_LIBRARY"
             };
@@ -255,7 +255,7 @@ for _, build in build:default_builds("cc_.*") do
 
     if platform == "windows" then
         freetype {
-            build:Cc () {
+            build:Cc '${obj}/%1' {
                 defines = {
                     "FT2_BUILD_LIBRARY"
                 };
